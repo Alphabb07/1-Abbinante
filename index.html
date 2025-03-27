@@ -1,57 +1,146 @@
-h<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="it">
 <head>
-    <title>Virus Alert!</title>
-    <style>
-        body {
-            background-color: black;
-            color: red;
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-            padding: 100px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fake Facebook Page</title>
+  <style>
+    /* Reset di base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .container {
-            border: 5px solid red;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
-        }
+    /* Corpo pagina con sfondo simile a Facebook */
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      background: #f0f2f5;
+      color: #1c1e21;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+    }
 
-        .error {
-            font-size: 48px;
-        }
+    /* Barra superiore (header) in stile Facebook */
+    header {
+      width: 100%;
+      background: #1877f2;
+      padding: 15px 0;
+      text-align: center;
+    }
+    header h1 {
+      color: #fff;
+      font-size: 2rem;
+      font-weight: bold;
+    }
 
-        .message {
-            font-size: 24px;
-        }
+    /* Contenitore principale */
+    .container {
+      background: #fff;
+      width: 100%;
+      max-width: 400px;
+      margin-top: 50px; /* spazio sotto l’header */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
 
-        .details {
-            font-size: 18px;
-        }
+    /* Testo introduttivo */
+    .container p {
+      font-size: 1rem;
+      margin: 10px 0 20px;
+      color: #606770;
+      line-height: 1.5;
+    }
 
-        #closeButton {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: red;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-    </style>
+    /* Pulsante stile Facebook */
+    #myButton {
+      display: inline-block;
+      width: 100%;
+      padding: 15px 0;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      background: #1877f2;
+      color: #fff;
+      margin-top: 10px;
+    }
+    #myButton:hover {
+      transform: scale(1.02);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Immagine ingrandita inizialmente nascosta */
+    #bigImage {
+      display: none;
+      margin-top: 30px;
+      max-width: 100%;
+      border: 3px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    /* Rendi la pagina un po’ reattiva su schermi più piccoli */
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      .container {
+        width: 90%;
+        margin-top: 30px;
+      }
+      #myButton {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="error">ATTENZIONE!</h1>
-        <p class="message">I tuoi dati sono stati raccolti e salvati in un database visibile dagli amministratori della piattaforma le tue chat backup sono state raccolte e saranno resi visibili online per un profit di circa 51.456€ Si prega di contattare il numero tecnico seguente: 1-800-995-90. I tuoi messaggi e il tuo indirizzo ip e' registrato nel datbase.</p>
-        <p class="details">Contattare il supporto tecnico al numero 55896896#hjesv</p>
-        <button id="closeButton">Chiudi</button>
-    </div>
-    <script>
-        document.getElementById('closeButton').addEventListener('click', function() {
-            alert("Dati correttamente ricevuti nel database");
-        });
-    </script>
+
+  <!-- Barra stile Facebook -->
+  <header>
+    <h1>facebook</h1>
+  </header>
+
+  <!-- Contenitore centrale -->
+  <div class="container">
+    <p>Clicca il pulsante qui sotto per guardare su Facebook...</p>
+
+    <!-- Pulsante -->
+    <button id="myButton">Clicca per guardare su Facebook</button>
+
+    <!-- Immagine grande che comparirà dopo il click -->
+    <img id="bigImage" src="FOTOPORNO.png" alt="Immagine" />
+  </div>
+
+  <!-- Audio MP3 -->
+  <audio id="myAudio" src="Orgasm troll sound⧸memes⧸video.mp3" preload="auto"></audio>
+
+  <script>
+    const button = document.getElementById("myButton");
+    const bigImage = document.getElementById("bigImage");
+    const audio = document.getElementById("myAudio");
+
+    button.addEventListener("click", () => {
+      // Mostra l’immagine
+      bigImage.style.display = "block";
+      
+      // Fa partire l'audio
+      audio.play();
+
+      // Dopo 1.2 secondi mostra il popup
+      setTimeout(() => {
+        alert("Tua moglie è stata avvisata che stavi guardando! \nLa ragazza in questione contatterà i seguenti numeri per un appuntamento:\n- 3483718836\n- 3408958928\npresso Divino Caffè.");
+      }, 1200);
+    });
+  </script>
+
 </body>
 </html>
